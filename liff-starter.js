@@ -34,17 +34,16 @@ function initializeApp(data) {
         let searchConditions = document.getElementById('searchConditions').value;
 
         liff.sendMessages([{
-            type: 'text',
-            text: searchWord
-        }, {
-            type: 'sticker',
-            packageId: '2',
-            stickerId: '144'
-        }]).then(function() {
-            window.alert("Message sent");
-        }).catch(function(error) {
-            window.alert("Error sending message: " + error);
-        });
+                type: 'text',
+                text: 'Hello, World!',
+            }, ])
+            .then(() => {
+                window.alert('Message sent');
+            })
+            .catch((error) => {
+                window.alert('Error sending message: ' + error);
+            });
+
     });
 
     // get access token
